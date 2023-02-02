@@ -1,11 +1,18 @@
-export function beject<T = any>(data: T[] = []) {
+type Hooks<T> = {
+  afterRun?: (data: T) => void;
+}
+
+
+export function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
   /**
  *  Create a new object within the array. 
  *  It takes in the existing array and the new object, 
  *  and returns a new array with the newly added object.
  */
   function create(object: T) {
-    return beject([object, ...data]);
+    const newData = [object, ...data];
+    hooks?.afterRun?.(newData);
+    return beject(newData);
   }
 
   /**
@@ -16,6 +23,7 @@ export function beject<T = any>(data: T[] = []) {
   function remove(index: number) {
     const newData = [...data];
     newData.splice(index, 1);
+    hooks?.afterRun?.(newData);
     return beject(newData);
   }
 
@@ -27,6 +35,7 @@ export function beject<T = any>(data: T[] = []) {
   function update(index: number, object: T) {
     const newData = [...data];
     newData.splice(index, 1, object);
+    hooks?.afterRun?.(newData);
     return beject(newData);
   }
 

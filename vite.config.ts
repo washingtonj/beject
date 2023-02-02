@@ -4,9 +4,9 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   build: {
     lib: {
-      entry: './lib/beject.ts',
+      entry: ['./lib/index.ts'],
       name: 'Beject',
-      fileName: 'beject'
+      fileName: 'beject',
     }
   },
   plugins: [dts()]

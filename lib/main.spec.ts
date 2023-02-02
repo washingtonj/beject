@@ -12,9 +12,9 @@ describe('Beject', () => {
     const actual = beject(data).create(object)
 
     // then
-    expect(actual).toEqual(expected)
+    expect(actual.data).toEqual(expected)
   })
-  
+
   it('should remove', () => {
     // given
     const data = [{ id: 1, name: 'foo' }, { id: 2, name: 'bar' }]
@@ -25,7 +25,7 @@ describe('Beject', () => {
     const actual = beject(data).remove(index)
 
     // then
-    expect(actual).toEqual(expected)
+    expect(actual.data).toEqual(expected)
   })
 
   it('should update', () => {
@@ -39,7 +39,7 @@ describe('Beject', () => {
     const actual = beject(data).update(index, object)
 
     // then
-    expect(actual).toEqual(expected)
+    expect(actual.data).toEqual(expected)
   })
 
   it('should updateByKey', () => {
@@ -51,9 +51,10 @@ describe('Beject', () => {
     const expected = [{ id: 1, name: 'baz' }, { id: 2, name: 'bar' }]
 
     // when
-    const actual = beject(data).updateByKey(index, key, value)
+    const actual =
+      beject(data).updateByKey(index, key, value)
 
     // then
-    expect(actual).toEqual(expected)
+    expect(actual.data).toEqual(expected)
   })
 })

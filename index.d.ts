@@ -1,1 +1,1 @@
-export function beject(): void
+export { beject } from './lib/main'

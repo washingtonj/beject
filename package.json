@@ -4,15 +4,14 @@
   "version": "1.0.0-beta",
   "type": "module",
   "files": [
-    "dist",
-    "index.d.ts"
+    "dist"
   ],
   "license": "MIT",
   "main": "./dist/beject.umd.cjs",
   "module": "./dist/beject.js",
-  "types": "./index.d.ts",
+  "types": "./dist/ndex.d.ts",
   "exports": {
-    "types": "./index.d.ts",
+    "types": "./dist/beject.d.ts",
     "import": "./dist/beject.js",
     "require": "./dist/beject.umd.cjs"
   },
@@ -24,6 +23,7 @@
   "devDependencies": {
     "typescript": "^4.9.4",
     "vite": "^4.0.4",
+    "vite-plugin-dts": "^1.7.2",
     "vitest": "^0.28.3"
   }
 }

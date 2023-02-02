@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { beject } from './main'
+import { beject } from './beject'
 
 describe('Beject', () => {
   it('should create', () => {

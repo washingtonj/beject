@@ -2,7 +2,7 @@
   "name": "beject",
   "private": false,
   "author": "Washington Junior <wwnjr@icloud.com>",
-  "version": "1.0.1-beta",
+  "version": "1.0.2-beta",
   "type": "module",
   "files": [
     "dist"

@@ -1,5 +1,5 @@
 import { FormikProps } from 'formik';
-import { beject } from '../../core/beject'
+import { beject } from '../core/beject'
 
 /**
  * The `Plugin` function is a generic function that takes two type parameters: `T` and `K`.
@@ -13,7 +13,7 @@ import { beject } from '../../core/beject'
  * @returns {ReturnType<beject<T['values'][K]>>} Returns the result of calling `beject` with `instance.values[key]` and an `afterRun` option that updates the `instance`'s field value with the data returned by `beject`.
  */
 function Plugin<T extends FormikProps<any>, K extends keyof T['values']>(instance: T, key: K) {
-  return beject<T['values'][K]>(instance.values[key], {
+  return beject<T['values'][K][0]>(instance.values[key], {
     afterRun: (data) => instance.setFieldValue(key as string, data)
   })
 }

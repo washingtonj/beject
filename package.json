@@ -1,15 +1,16 @@
 {
   "name": "beject",
   "private": false,
+  "author": "Washington Junior <wwnjr@icloud.com>",
   "version": "1.0.1-beta",
   "type": "module",
   "files": [
     "dist"
   ],
   "license": "MIT",
-  "main": "./dist/beject.umd.cjs",
+  "main": "./dist/beject.js",
   "module": "./dist/beject.js",
-  "types": "./dist/ndex.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     "types": "./dist/beject.d.ts",
     "import": "./dist/beject.js",

@@ -1,2 +1,1 @@
-export * from './core/beject'
-export * from './plugins/react'
+export * as beject from './core/beject'

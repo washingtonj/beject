@@ -12,7 +12,7 @@ import Beject from '../core/beject'
  * 
  * @returns {ReturnType<Beject<T['values'][K]>>} Returns the result of calling `beject` with `instance.values[key]` and an `afterRun` option that updates the `instance`'s field value with the data returned by `beject`.
  */
-function Plugin<T extends FormikProps<any>, K extends keyof T['values']>(instance: T, key: K): ReturnType<typeof Beject<T['values'][K]>> {
+function Plugin<T extends FormikProps<any>, K extends keyof T['values']>(instance: T, key: K): ReturnType<typeof Beject<T['values'][K][0]>> {
   return Beject<T['values'][K][0]>(instance.values[key], {
     afterRun: (data) => instance.setFieldValue(key as string, data)
   })

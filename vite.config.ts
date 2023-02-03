@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import typescript from "@rollup/plugin-typescript";
+import multi from "@rollup/plugin-multi-entry";
 
 export default defineConfig({
   build: {
@@ -7,7 +8,19 @@ export default defineConfig({
       entry: ['./lib/index.ts', './lib/react/index.ts'],
       name: 'Beject',
       fileName: 'index',
+    },
+    rollupOptions: {
+      plugins: [
+        multi({
+          entryFileName: 'index.js',
+        }),
+        typescript({
+          sourceMap: false,
+          declaration: true,
+          outDir: "dist",
+          exclude: ["**/*.test.ts", "**/*.spec.ts"],
+        }),
+      ]
     }
-  },
-  plugins: [dts()]
+  }
 })

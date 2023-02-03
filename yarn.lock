@@ -371,6 +371,13 @@ beject@^1.0.4-beta:
   resolved "https://registry.yarnpkg.com/beject/-/beject-1.0.4-beta.tgz#5e74dc120f72ffb25b5dddaf0b7240aed7ddc4b8"
   integrity sha512-xT3lqTYbKAqI3xHuKNs9E3NFLo20WJPsjJ0YqRU7ZoHsLRaLamgSgFtNeTU8dQLw1cTCW27W7ythRiEIrB+GlQ==
 
+beject@^1.0.5-beta:
+  version "1.0.5-beta"
+  resolved "https://registry.yarnpkg.com/beject/-/beject-1.0.5-beta.tgz#d8f183334fbb31e4d533b3e1178cb2d053c827bd"
+  integrity sha512-URnSqN5wzyVzkmZhfZnVESfAlStWdpbZ7RgX+nmfwXKdxLWaMz+/9wn5D/egpAIVnpakJEbdsdOk96nUAeeOpA==
+  dependencies:
+    beject "^1.0.4-beta"
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"

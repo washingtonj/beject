@@ -1,2 +1,1 @@
-import formik from './formik'
-export default { formik }
+export { default as bejectFormik } from './formik'

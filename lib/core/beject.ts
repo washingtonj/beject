@@ -11,7 +11,7 @@ type Hooks<T> = {
  * 
  *  @returns {Object} The return object contains functions for managing the array of objects.
  */
-export function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
+function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
   /**
    *  Create a new object within the array. 
    *  It takes in the existing array and the new object, 
@@ -85,3 +85,5 @@ export function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
     data
   };
 }
+
+export default beject;

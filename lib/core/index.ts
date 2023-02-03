@@ -1,0 +1,1 @@
+export { default as Beject } from './beject' 

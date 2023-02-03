@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { beject } from './beject'
+import Beject from './beject'
 
 describe('Beject', () => {
   it('should create', () => {
@@ -9,7 +9,7 @@ describe('Beject', () => {
     const expected = [object, ...data]
 
     // when
-    const actual = beject(data).create(object)
+    const actual = Beject(data).create(object)
 
     // then
     expect(actual.data).toEqual(expected)
@@ -22,7 +22,7 @@ describe('Beject', () => {
     const expected = data.slice(1)
 
     // when
-    const actual = beject(data).remove(index)
+    const actual = Beject(data).remove(index)
 
     // then
     expect(actual.data).toEqual(expected)
@@ -36,7 +36,7 @@ describe('Beject', () => {
     const expected = [object, ...data.slice(1)]
 
     // when
-    const actual = beject(data).update(index, object)
+    const actual = Beject(data).update(index, object)
 
     // then
     expect(actual.data).toEqual(expected)
@@ -52,7 +52,7 @@ describe('Beject', () => {
 
     // when
     const actual =
-      beject(data).updateByKey(index, key, value)
+      Beject(data).updateByKey(index, key, value)
 
     // then
     expect(actual.data).toEqual(expected)

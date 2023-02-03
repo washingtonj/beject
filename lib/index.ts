@@ -1,1 +1,1 @@
-export * as beject from './core/beject'
+export * from './core'

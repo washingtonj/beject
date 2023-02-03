@@ -2,12 +2,13 @@
   "name": "beject",
   "private": false,
   "author": "Washington Junior <wwnjr@icloud.com>",
-  "version": "1.0.8-beta",
+  "version": "1.0.9-beta",
   "type": "module",
   "files": [
     "core",
     "react",
-    "core.js"
+    "core.js",
+    "react.js"
   ],
   "license": "MIT",
   "main": "./core.js",

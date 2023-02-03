@@ -57,4 +57,24 @@ describe('Beject', () => {
     // then
     expect(actual.data).toEqual(expected)
   })
+
+  it('should CreateKeepRemove', () => {
+    // given
+    const data = [
+      { id: 1, name: 'John' },
+      { id: 2, name: 'Jane' },
+      { id: 3, name: 'Jack' },
+    ];
+    const expected = [
+      { id: 1, name: 'John' },
+      { id: 2, name: 'Jane' },
+      { id: 4, name: 'New' },
+    ];
+
+    // when
+    const actual = Beject(data).createKeepRemove([1, 2, 4], 'id', { name: 'New' });
+
+    // then
+    expect(actual.data).toEqual(expected)
+  })
 })

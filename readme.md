@@ -11,6 +11,8 @@ You can install the beject package using npm:
 
 ## Usage
 
+All functions have JSDoc with detailed documentation and examples.
+
 Here are some examples of how to use beject:
 
 #### Creating a new object in an array

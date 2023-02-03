@@ -2,10 +2,11 @@
   "name": "beject",
   "private": false,
   "author": "Washington Junior <wwnjr@icloud.com>",
-  "version": "1.0.3-beta",
+  "version": "1.0.4-beta",
   "type": "module",
   "files": [
-    "dist"
+    "dist",
+    "dist/react"
   ],
   "license": "MIT",
   "main": "./dist/index.js",

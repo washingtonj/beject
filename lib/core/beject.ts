@@ -21,7 +21,7 @@ function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
    * 
    *  @returns {Object} The return object contains functions for managing the array of objects.
    */
-  function create(object: T) {
+  function create(object: T): ReturnType<typeof beject<T>> {
     const newData = [object, ...data];
     hooks?.afterRun?.(newData);
     return beject(newData);
@@ -34,9 +34,9 @@ function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
    * 
    *  @param {number} index - The index of the object in the array to be removed.
    * 
-   *  @returns {Object} The return object contains functions for managing the array of objects.
+   *  @returns {object} The return object contains functions for managing the array of objects.
    */
-  function remove(index: number) {
+  function remove(index: number): ReturnType<typeof beject<T>> {
     const newData = [...data];
     newData.splice(index, 1);
     hooks?.afterRun?.(newData);
@@ -53,7 +53,7 @@ function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
    * 
    *  @returns {Object} The return object contains functions for managing the array of objects.
    */
-  function update(index: number, object: T) {
+  function update(index: number, object: T): ReturnType<typeof beject<T>> {
     const newData = [...data];
     newData.splice(index, 1, object);
     hooks?.afterRun?.(newData);
@@ -70,7 +70,7 @@ function beject<T = any>(data: T[] = [], hooks?: Hooks<T[]>) {
    *  @param {any} value - The new value for the key.
    * 
    */
-  function updateByKey(index: number, key: keyof T, value: any) {
+  function updateByKey(index: number, key: keyof T, value: any): ReturnType<typeof beject<T>> {
     const item = data.find((_, idx) => idx === index);
     if (!item) return beject(data);
     item[key] = value;

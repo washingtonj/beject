@@ -2,8 +2,16 @@
   "name": "beject",
   "private": false,
   "author": "Washington Junior <wwnjr@icloud.com>",
+  "description": "Beject provides a simple way to interact with arrays of objects in JavaScript.",
   "version": "1.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/washingtonj/beject"
+  },
+  "bugs": {
+    "url": "https://github.com/washingtonj/beject/issues"
+  },
   "files": [
     "core",
     "react",

@@ -5,7 +5,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: { core: './lib/core/index.ts', react: './lib/react/index.ts' },
-      fileName: (_format, fileName) => `${fileName}.js`,
+      name: 'beject',
+      formats: ['es', 'cjs'],
+      fileName: (format, fileName) => `${fileName}.${format}.js`,
     },
     outDir: '.',
     rollupOptions: {

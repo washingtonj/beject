@@ -2,22 +2,29 @@
   "name": "beject",
   "private": false,
   "author": "Washington Junior <wwnjr@icloud.com>",
-  "version": "1.0.9-beta",
+  "version": "1.0.0",
   "type": "module",
   "files": [
     "core",
     "react",
-    "core.js",
-    "react.js"
+    "core.cjs.js",
+    "core.es.js",
+    "react.cjs.js",
+    "react.es.js"
   ],
   "license": "MIT",
   "main": "./core.js",
-  "module": "./core.js",
+  "module": "./core.es.js",
   "types": "./core/index.d.ts",
   "exports": {
-    "import": "./core.js",
-    "require": "./core.js",
-    "default": "./core.js"
+    ".": {
+      "import": "./core.es.js",
+      "require": "./core.cjs.js"
+    },
+    "./react": {
+      "import": "./react.es.js",
+      "require": "./react.cjs.js"
+    }
   },
   "scripts": {
     "dev": "vite",

@@ -1,5 +1,5 @@
 import { FormikProps } from 'formik';
-import Beject from '../core/beject'
+import Beject from '../core'
 
 /**
  * The `Plugin` function is a generic function that takes two type parameters: `T` and `K`.

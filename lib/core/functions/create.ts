@@ -4,6 +4,9 @@ export type CreateProps<T> = {
 
   /** The new object to be created. */
   object: T;
+
+  /** Define the way the object is inserted into the array */
+  position?: 'first' | 'last';
 }
 
 
@@ -13,7 +16,13 @@ export type CreateProps<T> = {
  * and returns a new array with the newly added object.
  */
 export function create<T>(props: CreateProps<T>) {
-  const { input, object } = props;
-  const output = [object, ...input];
+  const { input, object, position = 'first' } = props;
+
+  if (position === 'first') {
+    const output = [object, ...input];
+    return output;
+  }
+
+  const output = [...input, object];
   return output;
 }

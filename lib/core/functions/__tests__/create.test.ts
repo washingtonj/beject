@@ -21,4 +21,28 @@ describe('Create', () => {
       { id: 3, name: 'Jack' },
     ])
   })
+
+  it('should create a new object within the array at the end', () => {
+    // given
+    const data = [
+      { id: 1, name: 'John' },
+      { id: 2, name: 'Jane' },
+      { id: 3, name: 'Jack' },
+    ]
+
+    // when
+    const output = create({
+      input: data,
+      object: { id: 4, name: 'New' },
+      position: 'last',
+    })
+
+    // then
+    expect(output).toEqual([
+      { id: 1, name: 'John' },
+      { id: 2, name: 'Jane' },
+      { id: 3, name: 'Jack' },
+      { id: 4, name: 'New' },
+    ])
+  })
 })
